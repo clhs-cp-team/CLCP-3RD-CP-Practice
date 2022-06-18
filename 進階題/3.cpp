@@ -32,14 +32,13 @@ int main(){
         }
         double l=0.0,r=300.0,mr,ml;
         int count=0;
-        while(count<=20){
-            mr=(l*2.0+r)/3.0;
-            ml=(l+r*2.0)/3.0;
-            cout<<mr<<" "<<ml<<endl;
+        while(count<=100){
+            mr=r-((r-l)/3.0);
+            ml=l+((r-l)/3.0);
             if(solve(mr)>solve(ml))r=mr;
             else l=ml;
             count++;
         }
-        cout<<ml<<endl;
+        cout<<fixed<<setprecision(6)<<solve(mr)<<endl;
     }
 }

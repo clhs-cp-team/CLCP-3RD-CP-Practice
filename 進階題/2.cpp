@@ -22,15 +22,6 @@ bool check(int k){
     for(int i=0;i<n;i++)list.pb(our[i].ff+our[i].ss*k);
     sort(list.begin(),list.end());
 
-    auto up=upper_bound(list.begin(),list.end(),enemy[win-1]);
-
-    // if(up!=list.end()){
-    //     cout<<k<<" "<<up-list.begin()<<endl;
-    //     return ((up-list.begin())<(win+1));
-    // }else{
-    //     return false;
-    // }
-    // return (up!=list.end());
     int s=0,l=0;
     for(int i=0;i<n;i++){
         if(list[i]>enemy[l]){
