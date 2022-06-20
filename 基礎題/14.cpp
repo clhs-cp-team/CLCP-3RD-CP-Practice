@@ -12,11 +12,15 @@ using namespace std;
 
 int main(){
     AC
-    int a,b,t;cin>>a>>b;
-    while(b!=0){
-        t=b;
-        b=a%b;
-        a=t;
+    string a,b;
+    cin>>a>>b;
+
+    int arr[26]={0};
+
+    for(int i=0;i<a.size();i++){
+        arr[((int)a[i]+(int)b[i]-97*2)%26]++;  
     }
-    cout<<a;
+    for(int i=0;i<25;i++){
+        cout<<arr[i]<<" ";
+    }cout<<arr[25];
 }

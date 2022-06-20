@@ -8,15 +8,17 @@
 #define MOD 1000000009
 #define AC ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 #define ll long long
+#define endl "\n"
 using namespace std;
 
 int main(){
     AC
-    int a,b,t;cin>>a>>b;
-    while(b!=0){
-        t=b;
-        b=a%b;
-        a=t;
+    int arr[1005],x;
+    cin>>x;
+    for(int i=0;i<x;i++){
+        cin>>arr[i];
     }
-    cout<<a;
+    for(int i=0;i<x;i++){
+        cout<<arr[arr[i]]<<endl;
+    }
 }
